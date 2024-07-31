@@ -88,9 +88,11 @@ const CardPresentation = () => {
 
   return (
     <div className="card-container">
+      {/* Front Side */}
       <div className="face front">
         <h3>Front Side</h3>
       </div>
+      {/* Back Side */}
       <div className="face back">
         <h3>Back Side</h3>
         <p>This is the back of the card.</p>
