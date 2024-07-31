@@ -8,11 +8,7 @@ import IconWhatsapp from "../../assets/icon/logo-whatsapp.png";
 import IconGmail from "../../assets/icon/logo-gmail.png";
 import IconLinkedin from "../../assets/icon/logo-linkedin.png";
 import Profile from "../../assets/img/profile.png";
-import EnterpiseColor from "../../assets/img/enterprise-color-hd.png";
-import EnterpiseWhite from "../../assets/img/enterprise-white-hd.png";
-import GistezyFont from "../../assets/font/Gistesy.ttf";
-import NourdNormalFont from "../../assets/font/Nourd/nourd_regular.ttf";
-import NourdBoldFont from "../../assets/font/Nourd/nourd_semi_bold.ttf";
+import EnterpriseLog from "../../assets/svg/enterprise-w.svg";
 
 const CardPresentation = () => {
   const designs = [
@@ -56,24 +52,6 @@ const CardPresentation = () => {
     },
   ];
 
-  const fonts = [
-    {
-      id: 1,
-      font: GistezyFont,
-      title: "Gistezy",
-    },
-    {
-      id: 2,
-      font: NourdNormalFont,
-      title: "Nourd Normal",
-    },
-    {
-      id: 3,
-      font: NourdBoldFont,
-      title: "Nourd Bold",
-    },
-  ];
-
   const profile = [
     {
       id: 1,
@@ -82,13 +60,29 @@ const CardPresentation = () => {
     },
     {
       id: 2,
-      img: EnterpiseColor,
-      title: "Enterprise Color",
+      img: EnterpriseLog,
+      title: "Enterprise Logo",
+    },
+  ];
+
+  const infocontact = [
+    {
+      id: 1,
+      title: "Whatsapp",
+      info: "+57 320 890 1234",
+      link: "https://wa.me/573147133334",
+    },
+    {
+      id: 2,
+      title: "Gmail",
+      info: "victoradila@gmail.com",
+      link: "https://mail.google.com/mail/u/0/#inbox",
     },
     {
       id: 3,
-      img: EnterpiseWhite,
-      title: "Enterprise White",
+      title: "Linkedin",
+      info: "linkedin.com/in/victorardila",
+      link: "https://www.linkedin.com/in/victor-ardila-31a94b230/",
     },
   ];
 
@@ -96,12 +90,76 @@ const CardPresentation = () => {
     <div className="card-container">
       {/* Front Side */}
       <div className="face front">
-        <h3>Front Side</h3>
+        <div className="card-silhouette">
+          <img src={designs[0].img} alt={designs[0].title} />
+        </div>
+        <div className="card-designs-front">
+          <div className="card-designs-layout">
+            <div className="card-designs-cubes-front">
+              <img src={designs[1].img} alt={designs[1].title} />
+            </div>
+            <div className="card-designs-info">
+              <div className="card-content-company-logo">
+                <img src="" alt={profile[1].title} typeof="svg" />
+              </div>
+              <div className="card-content-company-name">
+                <h2>INNOBYTE TECH</h2>
+                <p>Construimos tus sueños un byte a la vez</p>
+              </div>
+            </div>
+            <div className="card-design-corner-front">
+              <img src={designs[2].img} alt={designs[2].title} />
+            </div>
+          </div>
+        </div>
       </div>
       {/* Back Side */}
       <div className="face back">
-        <h3>Back Side</h3>
-        <p>This is the back of the card.</p>
+        <div className="card-designs-back">
+          <div className="card-design-corner-back">
+            <img src={designs[2].img} alt={designs[2].title} />
+          </div>
+          <div className="card-design-space-back"></div>
+          <div className="card-design-cubes-back">
+            <img src={designs[1].img} alt={designs[1].title} />
+          </div>
+        </div>
+        <div className="card-profile">
+          <div className="card-profile-layout">
+            <div className="card-profile-preview">
+              <div className="card-profile-design-back" style={{backgroundImage: `url(${designs[3].img})`, backgroundSize: "cover", backgroundPosition: "center"}}>
+                <div className="card-profile-picture">
+                  <img src={profile[0].img} alt={profile[0].title} />
+                </div>
+              </div>
+              <div className="card-profile-name">
+                <h2>Victor Ardila</h2>
+                <p>Ingeniero de sistemas</p>
+              </div>
+            </div>
+            <div className="card-profile-info">
+              <div className="card-profile-contact">
+                <div className="card-profile-contact-layout">
+                  {infocontact.map((item) => (
+                    <div className="card-profile-contact-item" key={item.id}>
+                      <img
+                        src={icons[item.id - 1].img}
+                        alt={icons[item.id - 1].title}
+                      />
+                      <a href={item.link} target="_blank" rel="noreferrer">
+                        {item.info}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="card-profile-role">
+                <h1>Desarrollador</h1>
+                <p>Full Stack</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
