@@ -3,6 +3,7 @@ import "./CardPresentation.style.css";
 import Silhouette from "../../assets/img/silhouette.png";
 import DesignCubes from "../../assets/img/design-cubes.png";
 import DesignCorner from "../../assets/img/design-corner.png";
+import ProfileContainer from "../../assets/img/profile_container.png";
 import IconWhatsapp from "../../assets/icon/logo-whatsapp.png";
 import IconGmail from "../../assets/icon/logo-gmail.png";
 import IconLinkedin from "../../assets/icon/logo-linkedin.png";
@@ -29,6 +30,11 @@ const CardPresentation = () => {
       id: 3,
       img: DesignCorner,
       title: "Design Corner",
+    },
+    {
+      id: 4,
+      img: ProfileContainer,
+      title: "Profile Container",
     },
   ];
 
