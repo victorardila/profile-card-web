@@ -435,6 +435,14 @@ h6 {
   .card-profile-design-back {
     width: 56%;
   }
+  .card-profile-picture{
+    justify-content: center;
+    width: 60%;
+  }
+  .card-profile-picture img{
+    width: 100%;
+    height: 55%;
+  }
 }
 
 /* Estilos para móviles (pantallas pequeñas) */
