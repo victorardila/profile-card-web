@@ -7,6 +7,7 @@ import ProfileContainer from "../../assets/img/profile_container.png";
 import IconWhatsapp from "../../assets/icon/logo-whatsapp.png";
 import IconGmail from "../../assets/icon/logo-gmail.png";
 import IconLinkedin from "../../assets/icon/logo-linkedin.png";
+import IconNetwork from "../../assets/icon/logo-network.png";
 import Profile from "../../assets/img/profile.png";
 import EnterpriseLog from "../../assets/svg/enterprise-w.svg";
 
@@ -37,19 +38,24 @@ const CardPresentation = () => {
   const icons = [
     {
       id: 1,
+      img: IconNetwork,
+      title: "Network",
+    },
+    {
+      id: 2,
       img: IconWhatsapp,
       title: "Whatsapp",
     },
     {
-      id: 2,
+      id: 3,
       img: IconGmail,
       title: "Gmail",
     },
     {
-      id: 3,
+      id: 4,
       img: IconLinkedin,
       title: "Linkedin",
-    },
+    }
   ];
 
   const profile = [
@@ -68,22 +74,28 @@ const CardPresentation = () => {
   const infocontact = [
     {
       id: 1,
-      title: "Whatsapp",
-      info: "+57 320 890 1234",
-      link: "https://wa.me/573147133334",
+      title: "Network",
+      info: "Portafolio web",
+      link: "https://portafolio-web-profesional.web.app/",
     },
     {
       id: 2,
+      title: "Whatsapp",
+      info: "+57 314 713 3334",
+      link: "https://wa.me/573147133334",
+    },
+    {
+      id: 3,
       title: "Gmail",
       info: "victoradila@gmail.com",
       link: "https://mail.google.com/mail/u/0/#inbox",
     },
     {
-      id: 3,
+      id: 4,
       title: "Linkedin",
       info: "linkedin.com/in/victorardila",
       link: "https://www.linkedin.com/in/victor-ardila-31a94b230/",
-    },
+    }
   ];
 
   return (

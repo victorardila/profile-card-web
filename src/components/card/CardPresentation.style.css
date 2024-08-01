@@ -253,7 +253,6 @@
     top: 0;
     left: 0;
     z-index: 2; /* Asegúrate de que tenga un z-index mayor que el de diseño */
-    pointer-events: none; /* Opcional: Evita que el perfil interfiera con los eventos de clic */
 }
 .card-profile-layout {
     display: grid;
