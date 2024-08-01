@@ -454,14 +454,14 @@ h6 {
   /* Estilos de la cara del  frente */
   .card-silhouette {
     width: 100%;
-    height: 35%;
+    height: 24%;
   }
   .card-silhouette img{
     width: 100%;
     object-position: 0px 80px;
   }
   .card-designs-info{
-    height: 50%;
+    height: 70%;
   }
   .card-designs-front{
     height: -webkit-fill-available;
@@ -483,7 +483,10 @@ h6 {
     text-align: center;
   }
   .card-design-corner-front{
-    height: 10%;
+    height: 15%;
+  }
+  .card-design-corner-front img{
+    height: 60px;
   }
   /* Estilos de la cara trasera*/
 }
