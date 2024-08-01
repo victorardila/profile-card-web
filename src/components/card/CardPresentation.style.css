@@ -484,9 +484,49 @@ h6 {
   }
   .card-design-corner-front{
     height: 15%;
+    align-items: end;
   }
   .card-design-corner-front img{
     height: 60px;
   }
   /* Estilos de la cara trasera*/
+  .card-profile-preview{
+    flex-direction: column;
+    height: 100%;
+  }
+  .card-profile-preview h2{
+    font-size: 35px;
+    text-align: center;
+  }
+  .card-profile-info{
+    flex-direction: column;
+    height: 100%;
+  }
+  .card-profile-contact{
+    width: 100%;
+  }
+  .card-profile-contact-item{
+    margin:0;
+  }
+  .card-profile-role{
+    width: 100%;
+  }
+  .card-profile-role h1{
+    font-size: 40px;
+  }
+  .card-profile-role p{
+    font-size: 18px;
+  }
+  .card-profile-design-back{
+    height: 70%;
+    width: 100%;
+  }
+  .card-profile-picture{
+    justify-content: center;
+    width: 100%;
+  }
+  .card-profile-name{
+    justify-content: center;
+    align-items: center;
+  }
 }
