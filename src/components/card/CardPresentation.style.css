@@ -1,390 +1,489 @@
 @font-face {
-    font-family: 'Nourd Bold';
-    src: url('../../assets/font/Nourd/nourd_bold.ttf') format('truetype');
+  font-family: "Nourd Bold";
+  src: url("../../assets/font/Nourd/nourd_bold.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Nourd Regular';
-    src: url('../../assets/font/Nourd/nourd_regular.ttf') format('truetype');
+  font-family: "Nourd Regular";
+  src: url("../../assets/font/Nourd/nourd_regular.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Gistesy';
-    src: url('../../assets/font/Gistesy.ttf') format('truetype');
+  font-family: "Gistesy";
+  src: url("../../assets/font/Gistesy.ttf") format("truetype");
 }
 
 .card-container {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    height: 60%;
-    width: 55%;
-    perspective: 1000px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 55%;
+  perspective: 1000px;
 }
 
 .card-container .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 24px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
 }
 
 .card-container .front {
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(34, 32, 33);
-    transform: rotateY(0deg);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(34, 32, 33);
+  transform: rotateY(0deg);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-container .back {
-    position: relative; /* Asegúrate de que el contenedor padre sea relativo para que el elemento hijo absoluto se posicione correctamente */
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(34, 32, 33);
-    transform: rotateY(180deg);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Asegúrate de que los elementos hijos no se salgan del contenedor */
+  position: relative; /* Asegúrate de que el contenedor padre sea relativo para que el elemento hijo absoluto se posicione correctamente */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(34, 32, 33);
+  transform: rotateY(180deg);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Asegúrate de que los elementos hijos no se salgan del contenedor */
 }
 
 .card-container:hover .front {
-    transform: rotateY(180deg);
-    cursor: pointer;
+  transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .card-container:hover .back {
-    transform: rotateY(360deg);
-    cursor: pointer;
+  transform: rotateY(360deg);
+  cursor: pointer;
 }
 
 .card-silhouette {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 86%;
 }
 .card-silhouette img {
-    width: 100%;
-    height: 115%;
-    object-fit: cover;
-    object-position: -70px;
+  width: 100%;
+  height: 115%;
+  object-fit: cover;
+  object-position: -70px;
 }
 .card-designs-front {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
-.card-designs-layout{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+.card-designs-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .card-designs-cubes-front {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 15%;
-    width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 15%;
+  width: 100%;
 }
 .card-designs-cubes-front img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 .card-design-corner-front {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 15%;
-    width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 15%;
+  width: 100%;
 }
 .card-design-corner-front img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    /* volteo horizontal */
-    transform: scaleX(-1);
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  /* volteo horizontal */
+  transform: scaleX(-1);
 }
 .card-content-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* 4 filas */
-    grid-template-rows: 1.5fr 1.2fr 0.5fr;
-    height: -webkit-fill-available;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* 4 filas */
+  grid-template-rows: 1.5fr 1.2fr 0.5fr;
+  height: -webkit-fill-available;
 }
 .card-designs-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 100%;
 }
 .card-content-company-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
 }
 .card-content-company-logo img {
-    display: flex;
-    color: transparent;
-    width: auto;
-    height: -webkit-fill-available;
-    object-fit: cover;
-    mask-image: url('../../assets/svg/enterprise-w.svg') !important;
-    mask-size: contain !important;
-    mask-repeat: no-repeat !important;
-    background: linear-gradient(-145deg, #80E6EA, #A4DEEC, #5FD9D9, #128BA6, #0D6BA6); /* Degradado */
-    -webkit-mask-image: url('../../assets/svg/enterprise-w.svg') !important;
-    -webkit-mask-size: contain !important;
-    -webkit-mask-repeat: no-repeat !important;
+  display: flex;
+  color: transparent;
+  width: auto;
+  height: -webkit-fill-available;
+  object-fit: cover;
+  mask-image: url("../../assets/svg/enterprise-w.svg") !important;
+  mask-size: contain !important;
+  mask-repeat: no-repeat !important;
+  background: linear-gradient(
+    -145deg,
+    #80e6ea,
+    #a4deec,
+    #5fd9d9,
+    #128ba6,
+    #0d6ba6
+  ); /* Degradado */
+  -webkit-mask-image: url("../../assets/svg/enterprise-w.svg") !important;
+  -webkit-mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat !important;
 }
-  
+
 .card-content-company-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
 }
-.card-content-company-name h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    font-size: 45px;
-    font-family: 'Nourd Bold';
-    letter-spacing: 10px;
+.card-content-company-name h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: 45px;
+  font-family: "Nourd Bold";
+  letter-spacing: 10px;
 }
 .card-content-company-name h2 {
-    background: linear-gradient(to right, #80E6EA, #A4DEEC); /* Degradado */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #80e6ea, #a4deec); /* Degradado */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .card-content-company-name p {
-    margin: 0;
-    font-size: 20px;
-    font-family: 'Nourd Regular';
-    font-size: 18px;
-    letter-spacing: 4px;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Nourd Regular";
+  font-size: 18px;
+  letter-spacing: 4px;
 }
 .card-content-company-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .card-content-designs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .card-content-designs img {
-    width: auto;
-    height: 20%;
-    object-fit: cover;
+  width: auto;
+  height: 20%;
+  object-fit: cover;
 }
 .card-content-designs img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .card-designs-back {
-    position: relative;
-    display: grid;
-    grid-template-columns: 0.5fr 4fr 1.5fr;
-    grid-template-rows: 1fr;
-    height: 100%;
-    width: 100%;   
-    z-index: 1; /* Coloca esto en un índice de pila menor */
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 1.5fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  width: 100%;
+  z-index: 1; /* Coloca esto en un índice de pila menor */
 }
-.card-design-corner-back{
-    display: flex;
-    justify-content: start;
-    align-items: end;
-    height: 100%;
-    width: 100%;
+.card-design-corner-back {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  height: 100%;
+  width: 100%;
 }
 .card-design-corner-back img {
-    width: 80%;
-    height: auto;
-    object-fit: cover;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
 }
 .card-design-space-back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .card-design-cubes-back {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  width: 100%;
 }
 .card-design-cubes-back img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .card-profile {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: absolute; /* Para posicionar absolutamente en relación al contenedor padre */
-    top: 0;
-    left: 0;
-    z-index: 2; /* Asegúrate de que tenga un z-index mayor que el de diseño */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Para posicionar absolutamente en relación al contenedor padre */
+  top: 0;
+  left: 0;
+  z-index: 2; /* Asegúrate de que tenga un z-index mayor que el de diseño */
 }
 .card-profile-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
-    height: 100%;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  height: 100%;
+  width: 100%;
 }
 .card-profile-preview {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Alinea horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    height: 100%;
-    width: 100%;
-    position: relative; /* Para que el z-index funcione */
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Alinea horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+  height: 100%;
+  width: 100%;
+  position: relative; /* Para que el z-index funcione */
 }
-.card-profile-preview h2{
-    background: linear-gradient(to right, #80E6EA, #A4DEEC); /* Degradado */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.card-profile-preview h2 {
+  background: linear-gradient(to right, #80e6ea, #a4deec); /* Degradado */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .card-profile-design-back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
 }
 .card-profile-picture {
-    position: relative; /* Para superponerse sobre el diseño */
-    left: 0px; /* Ajusta la posición según sea necesario */
-    top: -2px; /* Ajusta la posición según sea necesario */
-    display: flex;
-    justify-content: start; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: fit-content;
-    height: 100%;
+  position: relative; /* Para superponerse sobre el diseño */
+  left: 0px; /* Ajusta la posición según sea necesario */
+  top: -2px; /* Ajusta la posición según sea necesario */
+  display: flex;
+  justify-content: start; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: fit-content;
+  height: 100%;
 }
 
 .card-profile-picture img {
-    width: 200px; /* Ajusta el tamaño según sea necesario */
-    height: 200px; /* Ajusta el tamaño según sea necesario */
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 2; /* Asegúrate de que la imagen del perfil esté encima */
+  width: 200px; /* Ajusta el tamaño según sea necesario */
+  height: 200px; /* Ajusta el tamaño según sea necesario */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Asegúrate de que la imagen del perfil esté encima */
 }
 .card-profile-name {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.card-profile-name h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    font-size: 45px;
-    font-family: 'Nourd Bold';
-    letter-spacing: 10px;
+.card-profile-name h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: 45px;
+  font-family: "Nourd Bold";
+  letter-spacing: 10px;
 }
 .card-profile-name p {
-    margin: 0;
-    font-size: 20px;
-    font-family: 'Nourd Regular';
-    font-size: 18px;
-    letter-spacing: 4px;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Nourd Regular";
+  font-size: 18px;
+  letter-spacing: 4px;
 }
 .card-profile-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Alinea horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Alinea horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+  height: 100%;
+  width: 100%;
 }
 .card-profile-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
 }
 .card-profile-contact-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-    height: 100%;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  height: 100%;
+  width: 100%;
 }
 .card-profile-contact-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-left: 10%;
 }
-.card-profile-contact-item img{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
+.card-profile-contact-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
-.card-profile-contact-item a{
-    margin: 0;
-    font-size: 20px;
-    font-family: 'Nourd Regular';
-    font-size: 18px;
-    letter-spacing: 4px;
-    color: #fff;
-    text-decoration: none;
+.card-profile-contact-item a {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Nourd Regular";
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #fff;
+  text-decoration: none;
 }
 .card-profile-role {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
 }
 .card-profile-role h1 {
-    margin: 0;
-    font-size: 70px;
-    font-family: 'Gistesy';
-    background: linear-gradient(to right, #80E6EA, #A4DEEC); /* Degradado */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  margin: 0;
+  font-size: 70px;
+  font-family: "Gistesy";
+  background: linear-gradient(to right, #80e6ea, #a4deec); /* Degradado */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.card-profile-role p{
-    margin: 0;
-    font-size: 20px;
-    font-family: 'Nourd Regular';
-    font-size: 18px;
-    letter-spacing: 4px;
+.card-profile-role p {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Nourd Regular";
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+/* Estilos para pantallas grandes (desktops) */
+@media (min-width: 1024px) {
+  /* Estilos de la Card */
+  .card-container {
+    height: 60%;
+    width: 55%;
+  }
+}
+
+/* Estilos para tablets (pantallas medianas) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos de la Card */
+  .card-container {
+    height: 100%;
+    width: 100%;
+  }
+  /* Estilos de la cara del  frente */
+  .card-silhouette img{
+    object-position: -342px;
+  }
+  .card-content-company-name {
+    justify-content: start;
+  }
+  .card-content-company-logo img{
+    height: 190px;
+  }
+  /* Estilos de la cara trasera*/
+  .card-profile-design-back {
+    width: 56%;
+  }
+}
+
+/* Estilos para móviles (pantallas pequeñas) */
+@media (max-width: 767px) {
+  /* Estilos de la Card */
+  .card-container {
+    height: 100%;
+    width: 100%;
+  }
+  .card-container .face{
+    border-radius: 0px;
+  }
+  .card-container .front{
+    display: flex;
+    flex-direction: column;
+  }
+  /* Estilos de la cara del  frente */
+  .card-silhouette {
+    width: 100%;
+    height: 35%;
+  }
+  .card-silhouette img{
+    width: 100%;
+    object-position: 0px 80px;
+  }
+  .card-designs-info{
+    height: 50%;
+  }
+  .card-designs-front{
+    height: -webkit-fill-available;
+  }
+  .card-content-company-logo{
+    height: 44%;
+  }
+  .card-content-company-name{
+    height: 45%;
+  }
+  .card-content-company-name h2{
+    font-size: 28px;
+    text-align: center;
+  }
+  .card-content-company-name p{
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+  }
+  .card-design-corner-front{
+    height: 10%;
+  }
+  /* Estilos de la cara trasera*/
 }
