@@ -458,7 +458,7 @@ h6 {
   }
   .card-silhouette img{
     width: 100%;
-    object-position: 0px 80px;
+    object-position: 0px -40px;
   }
   .card-designs-info{
     height: 70%;
